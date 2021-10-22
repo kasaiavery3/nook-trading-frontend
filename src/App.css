@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'FinkHeavy';
+  src: url('./font/FinkHeavy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'FinkHeavy';
+}
+
+body.fontLoaded {
+  font-family: 'FinkHeavy';
+}
+
 /* .App {
   text-align: center;
 }
@@ -42,6 +57,101 @@
   }
 } */
 
+/* @font-face {
+  font-family: FinkHeavy;
+  src: url('./font/FinkHeavy.ttf');
+} */
+
+html {
+  background-color: #6cc4d3;
+  /* background-image: url('./images/G79YngbW86RJ2QtzFfZEu3.jpg'); */
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 70px;
+  /* background-image: url('./images/animal-crossing-leaf-5442035_960_720.png'); */
+}
+
+h3 {
+  color: white;
+  font-family: 'FinkHeavy';
+  src: url('./font/FinkHeavy.ttf');
+  padding: 7.5px 0px 7.5px 10px;
+  border: 2px;
+  border-color: #49bf78;
+  border-style: solid;
+  margin-bottom: 0px;
+}
+
+.col img {
+  margin: 0px 0px 0px 0px;
+}
+
+.row {
+  max-width: 1fr;
+}
+
+.col-sm {
+  /* background-image: url('./images/NSwitch_AnimalCrossingNewHorizons_bg_leaves_green.jpg'); */
+  /* background-color: #C4C4C4; */
+  padding: 35px 35px;
+  width: 400px;
+  height: 204px;
+  flex: 0;
+  border: 2px;
+  border-color: white;
+  border-style: solid;
+}
+
+.item.col-sm {
+  background-image: url('./images/NSwitch_AnimalCrossingNewHorizons_bg_leaves_green.jpg');
+}
+
+.scrollbutton.col-sm {
+  max-width: 20px;
+  background-color: #a3885f;
+  padding: 35px 33px;
+  height: 204px;
+  flex: 0;
+  border: 2px;
+  border-color: #997d54;
+  border-style: solid;
+}
+
+/* .scroll.btn.btn-primary {
+  background-color: #DABE9C;
+  height: inherit;
+  position: fixed;
+  top: 0;
+} */
+
+path {
+  color: white;
+}
+
+.svg-inline--fa.fa-arrow-right.fa-w-14 {
+  width: 30px;
+  height: 30px;
+  /* background-color: black; */
+  margin: 52.5px 10px 50px -12.5px;
+}
+
+.bestsell {
+  padding-left: 287.5px;
+  background-color: #3eb36d;
+}
+
+.onsale {
+  padding-left: 287.5px;
+  background-color: #3eb36d;
+}
+
+.new {
+  padding-left: 287.5px;
+  background-color: #3eb36d;
+}
+
 .sidenav {
   color: #FBFEB2;
   height: 100%;  
@@ -50,11 +160,49 @@
   z-index: 1; 
   top: 0; 
   left: 0; 
-  background-color:#C3A887; 
+  background-color: #997d54; 
   transition: .5s ease; 
   overflow-x: hidden; 
   padding-top: 20px; 
   display: flex; 
   flex-direction: column; 
   align-items: center;
+  font-family: 'FinkHeavy';
+  src: url('./font/FinkHeavy.ttf');
+  border: 2px;
+  border-color: #a3885f;
+  border-style: solid;
+}
+
+.sidebar {
+  background-color: #997d54;
+  height: 100%;
+  width: 5%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  border: 2px;
+  border-color: #a3885f;
+  border-style: solid;
+}
+
+.footer {
+  background-color: #3eb36d;
+  height: 6.3%;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  bottom: -5;
+  border-color: #49bf78;
+  border-style: solid;
+  margin-bottom: 0px;
+}
+
+a.btn.btn-primary {
+  color: white;
+  background-color: #a3885f;
+  border-color: #a3885f;
+  margin: 10px;
+  padding: 10px 70px;
 }
