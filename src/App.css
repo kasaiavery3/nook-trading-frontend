@@ -191,9 +191,9 @@ path {
   background-color: #3eb36d;
   height: 6.3%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 0;
-  bottom: -5;
+  bottom: 0;
   border-color: #49bf78;
   border-style: solid;
   margin-bottom: 0px;
@@ -205,4 +205,130 @@ a.btn.btn-primary {
   border-color: #a3885f;
   margin: 10px;
   padding: 10px 70px;
+}
+
+a.btn.btn-primary.items {
+  color: white;
+  background-color: #a3885f;
+  border-color: #a3885f;
+  margin: 10px;
+  padding: 10px 62.335px 10px 62.335px;
+  /* width: 184.67px; */
+}
+
+.cart-btn {
+  /* background-color: black; */
+  position: fixed;
+  bottom: 0;
+  padding: 10px 10px 30px 10px;
+}
+
+.svg-inline--fa.fa-shopping-cart.fa-w-18 {
+  width: 30px;
+  height: 30px;
+}
+
+form {
+  height: 650px;
+  background-color: #997d54;
+}
+
+.col-md-7.offset-md-3 {
+  margin-left: 28.5%;
+  position: absolute;
+  top: 5;
+  background-color: #49bf78;
+}
+
+row.mt-4 {
+  margin-top: 0;
+}
+
+.card.card-body {
+  background-color: #997d54;
+}
+
+.form-control {
+  border-color: #a3885f;
+}
+
+.py-2 {
+  color: #FBFEB2;
+}
+
+label {
+  color: #FBFEB2;
+}
+
+.btn.btn-primary.float-right {
+  color: #3eb36d;
+  font-weight: bolder;
+  /* text-shadow: 2px 1px 1px black; */
+  background-color: #FBFEB2;
+  border-color: #3eb36d;
+  float: right;
+  margin-top: 20px;
+}
+
+div.backdrop {
+  z-index: -2;
+  width: 100%;
+  height: 800px;
+  background-color: #49bf78;
+  position: absolute;
+  top: 0;
+}
+
+.donthave {
+  color: #FBFEB2;
+  margin-top: 25px;
+}
+
+.donthavea {
+  color: #3eb36d;
+}
+
+.logo {
+  color: #FBFEB2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.cart {
+  height: 650px;
+  background-color: #997d54;
+  margin-left: 28.5%;
+  position: absolute;
+  top: 5;
+  background-color: #49bf78;
+}
+
+.text-center.pt-4 {
+  margin-left: 14%;
+  background-color: #6cc4d3;
+  border-style: solid;
+  border-bottom-width: 5px;
+  border-color: #6cc4d3;
+}
+
+.text-center.pt-4 h1 {
+  color: #FBFEB2;
+}
+
+.text-center.pt-4 p {
+  color: white;
+  border-style: solid;
+  border-bottom-width: 5px;
+  border-color: #6cc4d3;
+  /* background-color: #a3885f ; */
+}
+
+.profilepic img {
+  width: 10%;
+  height: 10%;
+  border-style: solid;
+  border-color: #997d54;
 }
