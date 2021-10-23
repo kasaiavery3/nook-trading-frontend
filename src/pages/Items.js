@@ -11,6 +11,9 @@ const Items = () => {
 
     useEffect(() => {
         axios.defaults.baseURL = process.env.REACT_APP_SERVER_URL;
+        axios.get(url).then((response) => {
+            setItems(response.data.)
+        })
     })
 
     return (
