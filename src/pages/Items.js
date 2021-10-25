@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Col, Image, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+// import Item from "../components/Item";
 import SideBar from "../components/SideBar";
 import SideNav from "../components/SideNav";
 
@@ -12,12 +15,37 @@ const Items = () => {
     useEffect(() => {
         axios.defaults.baseURL = process.env.REACT_APP_SERVER_URL;
         axios.get(url).then((response) => {
-            setItems(response.data.)
+            // console.log(response.data.items)
+            setItems(response.data.items)
         })
-    })
+    }, [])
+
+    function allItemsList(n, response) {
+        let itemArr = [];
+        for (let i = 0; i < n; i++) {
+            if (allItems[i]["image"]) {
+                itemArr.push(
+                    <Col sm className="item" key={allItems[i]["id"]}>
+                        <Link to={"items/" + allItems[i]} />
+                        <Image src={allItems[i]["image"]} />
+                    </Col>
+                )
+            }
+        }
+        return itemArr;
+    }
+
+    let displayAllItemsList = allItems.length ? (
+        allItemsList(allItems.length) 
+    ) : (
+        <div className="loading-screen">
+                <p>Loading...</p>
+        </div>
+    );
 
     return (
         <div>
+            <Row className="allitems">{displayAllItemsList}</Row>
             <SideNav />
             <SideBar />
             <Footer />

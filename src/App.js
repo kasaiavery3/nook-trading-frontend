@@ -93,10 +93,26 @@ function App() {
             />
           )}
         />
+        {/* <PrivateRoute 
+        path="/checkout/:id"
+        component={Checkout}
+        setCheckout={setCheckout}
+        setModelOpen={setModelOpen}
+        setReceipt={setReceipt}
+        />
+        <Route exact path="/" render={props => {
+          return (
+            <ProductContainer 
+              {...props}
+              addtoCart={addtoCart}
+              setCheckout={setCheckout}
+            />
+          )
+        }}/> */}
         <Route path="/signup" component={Signup} />
         <Route path="/cart" component={Cart} />
         <Route path="/checkout" component={Checkout} />
-        <Route path="/view" component={ViewItem} />
+        <Route path="/view/:item" component={ViewItem} />
         <Route path="/items" component={Items} />
       </Switch>
     </div>

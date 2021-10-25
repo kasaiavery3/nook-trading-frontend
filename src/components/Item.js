@@ -1,16 +1,18 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Item = (props) => {
     return (
         <Col sm className="item">
             <Link to={{
-                pathname: "/item/" + props.itemData.id,
+                pathname: "/items/" + props.itemData.id,
             }}
             >
-                <img src={props.itemData.image} />
+                <Image src={props.itemData.image} />
             </Link>
         </Col>
     )
 }
+
+export default Item;
