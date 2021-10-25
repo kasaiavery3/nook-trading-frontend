@@ -12,10 +12,30 @@ const SideNav = (props) => {
             <Link to="/" className="btn btn-primary">Home</Link>
             <Link to="/profile" className="btn btn-primary">Profile</Link>
             <Link to="/items" className='btn btn-primary items'>All Items</Link>
-            <Link to="/login" className="btn btn-primary">Log In</Link>
+            {
+                props.isAuth ? 
+                <Link to="/login" className="btn btn-primary">Log In</Link>
+                :
+                <div className="btn btn-primary logout" onClick={props.handleLogout}>
+                    Logout
+                </div>
+            }
             <Link to="/cart" className='cart-btn'>
                 <FontAwesomeIcon icon={faShoppingCart} />
             </Link>
+            {/* { 
+            props.isAuth 
+            ?  <div>
+                <Link to="/profile" className="btn btn-primary">Profile</Link>
+                <Link onClick={props.handleLogout} />
+                <Link to="/cart" className='cart-btn'>
+                    <FontAwesomeIcon icon={faShoppingCart} />
+                </Link>
+            </div>
+            : <div>
+                <Link to="/login" className="btn btn-primary">Log In</Link>
+            </div>
+} */}
         </div>
     )
 };

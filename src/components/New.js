@@ -1,40 +1,49 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Image from 'react-bootstrap/Image'
 import { Row, Col, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
-class New extends Component {
-    render() {
-        return (
-            <div className='new'>
-                <h3>New!</h3>
-                <Container>
-                    <Row>
-                        <Col sm className='item'>
+function New() {
+    return (
+        <div className='new'>
+            <h3>New!</h3>
+            <Container>
+                <Row>
+                    <Col sm className='item'>
+                        <NavLink to={`items/578`}>
                             <Image src="https://acnhapi.com/v1/images/furniture/FtrMarioSquareA" />
-                        </Col>
-                        <Col sm className='item'>
+                        </NavLink>
+                    </Col>
+                    <Col sm className='item'>
+                        <NavLink to={`items/579`}>
                             <Image src="https://acnhapi.com/v1/images/furniture/FtrMarioHall" />
-                        </Col>
-                        <Col sm className='item'>
+                        </NavLink>
+                    </Col>
+                    <Col sm className='item'>
+                        <NavLink to={`items/577`}>
                             <Image src="https://acnhapi.com/v1/images/furniture/FtrMarioRock" />
-                        </Col>
-                        <Col sm className='item'>
+                        </NavLink>
+                    </Col>
+                    <Col sm className='item'>
+                        <NavLink to={`items/585`}>
                             <Image src="https://acnhapi.com/v1/images/furniture/FtrMarioGroundobjectL_Remake_0_0" />
-                        </Col>
-                        <Col sm className='item'>
+                        </NavLink>
+                    </Col>
+                    <Col sm className='item'>
+                        <NavLink to={`items/580`}>
                             <Image src="https://acnhapi.com/v1/images/furniture/FtrMarioFablic" />
-                        </Col>
-                        <Col sm className='scrollbutton'>
-                            {/* <Button className='scroll' /> */}
-                            <FontAwesomeIcon icon={faArrowRight}/>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-        )
-    }
+                        </NavLink>
+                    </Col>
+                    <Col sm className='scrollbutton'>
+                        {/* <Button className='scroll' /> */}
+                        <FontAwesomeIcon icon={faArrowRight}/>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    )
 }
 
 export default New;

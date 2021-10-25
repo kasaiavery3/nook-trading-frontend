@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Row, Col, FloatingLabel } from "react-bootstrap";
+import { Form, FloatingLabel } from "react-bootstrap";
 import Footer from "../components/Footer";
 import SideBar from "../components/SideBar";
 import SideNav from "../components/SideNav";

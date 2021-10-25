@@ -211,6 +211,14 @@ a.btn.btn-primary {
   padding: 10px 70px;
 }
 
+div.btn.btn-primary {
+  color: white;
+  background-color: #a3885f;
+  border-color: #a3885f;
+  margin: 10px;
+  padding: 10px 70px;
+}
+
 a.btn.btn-primary.items {
   color: white;
   background-color: #a3885f;
@@ -412,4 +420,37 @@ div.contact {
   color: white;
   width: 100%;
   height: 800px;
+}
+
+.view-item.item.col-sm {
+  background-color: #3eb36d;
+  margin-left: 350px;
+  margin-top: 20px;
+  width: 220px;
+  margin-right: 1px;
+}
+
+.view-item.container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #3eb36d;
+}
+
+.view-item.image {
+  margin-left: 10px;
+}
+
+.view-item.h2 {
+  margin-top: 20px;
+  margin-left: 0px;
+  text-align: left;
+  color: #FBFEB2
+}
+
+.view-item.p {
+  color: white;
+}
+
+.backdrop.view-item {
+  background-color: #6cc4d3;
 }

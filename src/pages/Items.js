@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
 // import Item from "../components/Item";
 import SideBar from "../components/SideBar";
@@ -26,8 +26,9 @@ const Items = () => {
             if (allItems[i]["image"]) {
                 itemArr.push(
                     <Col sm className="item" key={allItems[i]["id"]}>
-                        <Link to={"items/" + allItems[i]} />
-                        <Image src={allItems[i]["image"]} />
+                        <NavLink to={`items/${allItems[i].id}`}>
+                            <Image src={allItems[i]["image"]} />
+                        </NavLink>
                     </Col>
                 )
             }

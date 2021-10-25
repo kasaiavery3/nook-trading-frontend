@@ -19,6 +19,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import SideNav from './components/SideNav';
 import SideBar from './components/SideBar';
+import Footer from './components/Footer';
 // import './App.scss';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -112,9 +113,10 @@ function App() {
         <Route path="/signup" component={Signup} />
         <Route path="/cart" component={Cart} />
         <Route path="/checkout" component={Checkout} />
-        <Route path="/view/:item" component={ViewItem} />
+        <Route path="/items/:id" component={ViewItem} />
         <Route path="/items" component={Items} />
       </Switch>
+      <Footer />
     </div>
   )
 }

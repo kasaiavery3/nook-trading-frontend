@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from "react";
 import SideBar from "../components/SideBar";
-import SideNav from "../components/SideNav";
+// import SideNav from "../components/SideNav";
 import axios from "axios";
 import Item from "../components/Item";
 
-const ViewItem = () => {
+const ViewItem = (props) => {
     const pageUrl = window.location.href
-    const _id = pageUrl.match(/item\/([\d]*)/)
-    const id = _id[1]
+ 
+    const id = props.match.params.id;
+ 
 
-    const [allItems, setItems] = useState([]);
+    const [item, setItem] = useState({});
 
     let url = "items/" + id;
-    console.log(id);
-    console.log("url", url);
+    // console.log(id);
+    // console.log("url", url);
 
     useEffect(() => {
         axios.defaults.baseURL = process.env.REACT_APP_SERVER_URL;
         axios.get(url).then((response) => {
-            setItems(response.data.items);
-              console.log("Testing data", response.data.items);
+            setItem(response.data.item);
+              console.log("Testing data", response.data);
           });
     }, []);
 
-    console.log("STATE", allItems[0]);
+    // console.log("STATE", allItems[0]);
 
-    let displayItem = allItems[0] ? (
-        <Item itemData={allItems[0]}/>
+    let displayItem = item ? (
+        <Item itemData={item}/>
     ) : (
         <p>Loading...</p>
     );
@@ -35,9 +36,9 @@ const ViewItem = () => {
         <div>
             {displayItem}
             {/* <Item /> */}
-            <SideNav />
+            {/* <SideNav /> */}
             <SideBar />
-            <div className="backdrop"></div>
+            <div className="backdrop view-item"></div>
         </div>
     )
 }
