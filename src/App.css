@@ -305,6 +305,11 @@ div.backdrop {
   text-decoration: none;
 }
 
+.purchase {
+  color: white;
+  text-decoration: none;
+}
+
 a:hover {
   color: inherit;
 }
